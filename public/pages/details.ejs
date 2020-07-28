@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <%data.forEach(val=>{%>
+            <div>
+                <h4><%=data.type%></h4>
+                <h5><%=data.setup%></h5>
+                <p><%=data.punchline%></p>
+                
+            </div>
+        <div>
+            <form action="updataDb" method="POST">
+                <input type="text" name="type" value="<%=data.type%> >
+                <input type="text" name="setup" value="<%=data.setup%>">
+                <input type="text" name="punchline" value="<%=data.punchline%>">
+                <input type="submit" value="Details">
+             </form>
+        </div>
+        <%})%>
+    </main>
+</body>
+</html>
