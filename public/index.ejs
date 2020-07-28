@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <%data.forEach(val=>{%>
+<div>
+    <h4><%=val.type%></h4>
+    <h5><%=val.setup%></h5>
+    <p><%=val.punchline%></p>
+    
+</div>
+<div>
+<form action="addToJokes" method="GET">
+   <input type="text" name="type" value="<%=val.type%> >
+   <input type="text" name="setup" value="<%=val.setup%>">
+   <input type="text" name="punchline" value="<%=val.punchline%>">
+   <input type="submit" value="ADD TO JOKES">
+</form>
+</div>
+<%})%>
+
+    </main>
+</body>
+</html>
